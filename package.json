@@ -1,5 +1,5 @@
 {
-  "name": "angular-gen",
+  "name": "generator-angular-gen",
   "version": "0.0.1",
   "description": "MEAN.JS Yeoman Generator Fork",
   "main": "app/index.js",
