@@ -1,13 +1,13 @@
 {
-  "name": "generator-meanjs",
-  "version": "0.4.5",
-  "description": "MEAN.JS Official Yeoman Generator",
+  "name": "generator-meanfork",
+  "version": "0.5",
+  "description": "MEAN.JS Yeoman Generator Fork",
   "main": "app/index.js",
   "repository": "meanjs/generator-meanjs",
   "author": {
-    "name": "MEAN.JS Team",
-    "email": "support@meanjs.org",
-    "url": "https://github.com/meanjs"
+    "name": "Matt Petters",
+    "email": "matt@petters.io",
+    "url": "https://github.com/mattpetters"
   },
   "engines": {
     "node": ">=0.12.0",

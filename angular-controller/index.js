@@ -52,8 +52,8 @@ var ControllerGenerator = yeoman.generators.Base.extend({
   },
 
   renderControllerFiles: function () {
-    this.template('_.client.controller.js', 'modules/' + this.slugifiedModuleName + '/client/controllers/' + this.slugifiedControllerName + '.client.controller.js');
-    this.template('_.client.controller.tests.js', 'modules/' + this.slugifiedModuleName + '/tests/client/' + this.slugifiedControllerName + '.client.controller.tests.js');
+    this.template('_.client.controller.js', 'modules/' + this.slugifiedModuleName + '/controllers/' + this.slugifiedControllerName + '.client.ctrl.js');
+    this.template('_.client.controller.tests.js', 'modules/' + this.slugifiedModuleName + '/tests/' + this.slugifiedControllerName + '.client.ctrl.tests.js');
   }
 });
 

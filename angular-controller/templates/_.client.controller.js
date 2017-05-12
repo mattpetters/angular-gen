@@ -8,14 +8,7 @@
   <%= classifiedControllerName %>Controller.$inject = ['$scope'];
 
   function <%= classifiedControllerName %>Controller($scope) {
-    var vm = this;
+    
 
-    // <%= humanizedControllerName %> controller logic
-    // ...
-
-    init();
-
-    function init() {
-    }
   }
 })();
