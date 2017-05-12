@@ -16,49 +16,45 @@
       })
       .state('<%= slugifiedPluralName %>.list', {
         url: '',
-        templateUrl: 'modules/<%= slugifiedPluralName %>/client/views/list-<%= slugifiedPluralName %>.client.view.html',
+        templateUrl: 'modules/<%= slugifiedPluralName %>/client/views/<%= slugifiedPluralName %>.list.client.view.html',
         controller: '<%= classifiedPluralName %>ListController',
-        controllerAs: 'vm',
         data: {
-          pageTitle: '<%= humanizedPluralName %> List'
+          friendlyName: '<%= humanizedPluralName %> List'
         }
       })
       .state('<%= slugifiedPluralName %>.create', {
         url: '/create',
-        templateUrl: 'modules/<%= slugifiedPluralName %>/client/views/form-<%= slugifiedSingularName %>.client.view.html',
+        templateUrl: 'modules/<%= slugifiedPluralName %>/client/views/<%= slugifiedSingularName %>.create.client.view.html',
         controller: '<%= classifiedPluralName %>Controller',
-        controllerAs: 'vm',
         resolve: {
           <%= slugifiedSingularName %>Resolve: new<%= classifiedSingularName %>
         },
         data: {
-          roles: ['user', 'admin'],
-          pageTitle: '<%= humanizedPluralName %> Create'
+          needAdmin: true,
+          friendlyName: '<%= humanizedPluralName %> Create'
         }
       })
       .state('<%= slugifiedPluralName %>.edit', {
-        url: '/:<%= camelizedSingularName %>Id/edit',
-        templateUrl: 'modules/<%= slugifiedPluralName %>/client/views/form-<%= slugifiedSingularName %>.client.view.html',
+        url: '/:<%= camelizedSingularName %>_id/edit',
+        templateUrl: 'modules/<%= slugifiedPluralName %>/client/views/<%= slugifiedSingularName %>.edit.client.view.html',
         controller: '<%= classifiedPluralName %>Controller',
-        controllerAs: 'vm',
         resolve: {
           <%= slugifiedSingularName %>Resolve: get<%= classifiedSingularName %>
         },
         data: {
-          roles: ['user', 'admin'],
-          pageTitle: 'Edit <%= humanizedSingularName %> {{ <%= slugifiedSingularName %>Resolve.name }}'
+          needAdmin: true,
+          friendlyName: 'Edit <%= humanizedSingularName %> {{ <%= slugifiedSingularName %>Resolve.name }}'
         }
       })
       .state('<%= slugifiedPluralName %>.view', {
-        url: '/:<%= camelizedSingularName %>Id',
-        templateUrl: 'modules/<%= slugifiedPluralName %>/client/views/view-<%= slugifiedSingularName %>.client.view.html',
+        url: '/:<%= camelizedSingularName %>_id',
+        templateUrl: 'modules/<%= slugifiedPluralName %>/client/views/<%= slugifiedSingularName %>.view.client.view.html',
         controller: '<%= classifiedPluralName %>Controller',
-        controllerAs: 'vm',
         resolve: {
           <%= slugifiedSingularName %>Resolve: get<%= classifiedSingularName %>
         },
         data: {
-          pageTitle: '<%= humanizedSingularName %> {{ <%= slugifiedSingularName %>Resolve.name }}'
+          friendlyName: '<%= humanizedSingularName %> {{ <%= slugifiedSingularName %>Resolve.name }}'
         }
       });
   }
