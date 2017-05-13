@@ -9,7 +9,7 @@
   <%= classifiedPluralName %>Service.$inject = ['$resource'];
 
   function <%= classifiedPluralName %>Service($resource) {
-    return $resource('api/<%= slugifiedPluralName %>/:<%= camelizedSingularName %>Id', {
+    return $resource('api/<%= slugifiedPluralName %>/:<%= camelizedSingularName %>_id', {
       <%= camelizedSingularName %>_id: '@_id'
     }, {
       update: {

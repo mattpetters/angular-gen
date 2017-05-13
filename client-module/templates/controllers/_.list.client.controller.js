@@ -5,11 +5,9 @@
     .module('<%= slugifiedPluralName %>')
     .controller('<%= classifiedPluralName %>ListController', <%= classifiedPluralName %>ListController);
 
-  <%= classifiedPluralName %>ListController.$inject = ['<%= classifiedPluralName %>Service'];
+  <%= classifiedPluralName %>ListController.$inject = [];
 
-  function <%= classifiedPluralName %>ListController(<%= classifiedPluralName %>Service) {
-    var vm = this;
+  function <%= classifiedPluralName %>ListController() {
 
-    vm.<%= camelizedPluralName %> = <%= classifiedPluralName %>Service.query();
   }
 }());
