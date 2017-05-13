@@ -1,5 +1,5 @@
-(function (app) {
+(function () {
   'use strict';
 
-  app.registerModule('<%= slugifiedPluralName %>');
-}(ApplicationConfiguration));
+  angular.module('<%= slugifiedPluralName %>', ['ui.router']);
+}());

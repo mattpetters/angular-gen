@@ -27,7 +27,7 @@
         templateUrl: 'modules/<%= slugifiedPluralName %>/client/views/<%= slugifiedSingularName %>.create.client.view.html',
         controller: '<%= classifiedPluralName %>Controller',
         resolve: {
-          <%= slugifiedSingularName %>Resolve: new<%= classifiedSingularName %>
+          // <%= slugifiedSingularName %>Resolve: new<%= classifiedSingularName %>
         },
         data: {
           needAdmin: true,
@@ -39,7 +39,7 @@
         templateUrl: 'modules/<%= slugifiedPluralName %>/client/views/<%= slugifiedSingularName %>.edit.client.view.html',
         controller: '<%= classifiedPluralName %>Controller',
         resolve: {
-          <%= slugifiedSingularName %>Resolve: get<%= classifiedSingularName %>
+          // <%= slugifiedSingularName %>Resolve: get<%= classifiedSingularName %>
         },
         data: {
           needAdmin: true,
@@ -51,7 +51,7 @@
         templateUrl: 'modules/<%= slugifiedPluralName %>/client/views/<%= slugifiedSingularName %>.view.client.view.html',
         controller: '<%= classifiedPluralName %>Controller',
         resolve: {
-          <%= slugifiedSingularName %>Resolve: get<%= classifiedSingularName %>
+          // <%= slugifiedSingularName %>Resolve: get<%= classifiedSingularName %>
         },
         data: {
           friendlyName: '<%= humanizedSingularName %> {{ <%= slugifiedSingularName %>Resolve.name }}'
@@ -59,17 +59,17 @@
       });
   }
 
-  get<%= classifiedSingularName %>.$inject = ['$stateParams', '<%= classifiedPluralName %>Service'];
+  // get<%= classifiedSingularName %>.$inject = ['$stateParams', '<%= classifiedPluralName %>Service'];
 
-  function get<%= classifiedSingularName %>($stateParams, <%= classifiedPluralName %>Service) {
-    return <%= classifiedPluralName %>Service.get({
-      <%= camelizedSingularName %>Id: $stateParams.<%= camelizedSingularName %>Id
-    }).$promise;
-  }
+  // function get<%= classifiedSingularName %>($stateParams, <%= classifiedPluralName %>Service) {
+  //   return <%= classifiedPluralName %>Service.get({
+  //     <%= camelizedSingularName %>Id: $stateParams.<%= camelizedSingularName %>Id
+  //   }).$promise;
+  // }
 
-  new<%= classifiedSingularName %>.$inject = ['<%= classifiedPluralName %>Service'];
+  // new<%= classifiedSingularName %>.$inject = ['<%= classifiedPluralName %>Service'];
 
-  function new<%= classifiedSingularName %>(<%= classifiedPluralName %>Service) {
-    return new <%= classifiedPluralName %>Service();
-  }
+  // function new<%= classifiedSingularName %>(<%= classifiedPluralName %>Service) {
+  //   return new <%= classifiedPluralName %>Service();
+  // }
 }());
