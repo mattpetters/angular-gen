@@ -25,9 +25,9 @@
       .state('<%= slugifiedPluralName %>.create', {
         url: '/create',
         templateUrl: 'modules/<%= slugifiedPluralName %>/views/<%= slugifiedSingularName %>.create.client.view.html',
-        controller: '<%= classifiedPluralName %>Controller',
+        controller: '<%= classifiedPluralName %>CreateController',
         resolve: {
-          // <%= slugifiedSingularName %>Resolve: new<%= classifiedSingularName %>
+
         },
         data: {
           needAdmin: true,
@@ -37,9 +37,9 @@
       .state('<%= slugifiedPluralName %>.edit', {
         url: '/:<%= camelizedSingularName %>_id/edit',
         templateUrl: 'modules/<%= slugifiedPluralName %>/views/<%= slugifiedSingularName %>.edit.client.view.html',
-        controller: '<%= classifiedPluralName %>Controller',
+        controller: '<%= classifiedPluralName %>EditController',
         resolve: {
-          // <%= slugifiedSingularName %>Resolve: get<%= classifiedSingularName %>
+
         },
         data: {
           needAdmin: true,
@@ -49,9 +49,9 @@
       .state('<%= slugifiedPluralName %>.view', {
         url: '/:<%= camelizedSingularName %>_id',
         templateUrl: 'modules/<%= slugifiedPluralName %>/views/<%= slugifiedSingularName %>.view.client.view.html',
-        controller: '<%= classifiedPluralName %>Controller',
+        controller: '<%= classifiedPluralName %>ViewController',
         resolve: {
-          // <%= slugifiedSingularName %>Resolve: get<%= classifiedSingularName %>
+
         },
         data: {
           friendlyName: '<%= humanizedSingularName %> {{ <%= slugifiedSingularName %>Resolve.name }}'
@@ -59,17 +59,4 @@
       });
   }
 
-  // get<%= classifiedSingularName %>.$inject = ['$stateParams', '<%= classifiedPluralName %>Service'];
-
-  // function get<%= classifiedSingularName %>($stateParams, <%= classifiedPluralName %>Service) {
-  //   return <%= classifiedPluralName %>Service.get({
-  //     <%= camelizedSingularName %>Id: $stateParams.<%= camelizedSingularName %>Id
-  //   }).$promise;
-  // }
-
-  // new<%= classifiedSingularName %>.$inject = ['<%= classifiedPluralName %>Service'];
-
-  // function new<%= classifiedSingularName %>(<%= classifiedPluralName %>Service) {
-  //   return new <%= classifiedPluralName %>Service();
-  // }
 }());

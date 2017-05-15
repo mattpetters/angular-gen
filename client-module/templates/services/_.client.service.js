@@ -6,15 +6,11 @@
     .module('<%= slugifiedPluralName %>')
     .factory('<%= classifiedPluralName %>Service', <%= classifiedPluralName %>Service);
 
-  <%= classifiedPluralName %>Service.$inject = ['$resource'];
+  <%= classifiedPluralName %>Service.$inject = ['$http'];
 
-  function <%= classifiedPluralName %>Service($resource) {
-    return $resource('api/<%= slugifiedPluralName %>/:<%= camelizedSingularName %>_id', {
-      <%= camelizedSingularName %>_id: '@_id'
-    }, {
-      update: {
-        method: 'PUT'
+  function <%= classifiedPluralName %>Service($http) {
+      return {
+        //method: function(){}
       }
-    });
   }
 }());

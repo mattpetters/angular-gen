@@ -129,12 +129,13 @@ var ModuleGenerator = yeoman.generators.Base.extend({
 
     // Render angular module files
     this.template('config/_.client.routes.js', 'modules/' + this.slugifiedPluralName + '/config/' + this.slugifiedPluralName + '.client.routes.js');
-    this.template('controllers/_.client.controller.js', 'modules/' + this.slugifiedPluralName + '/controllers/' + this.slugifiedPluralName + '.client.ctrl.js');
     this.template('controllers/_.list.client.controller.js', 'modules/' + this.slugifiedPluralName + '/controllers/' + this.slugifiedPluralName + '.list.client.ctrl.js');
+    this.template('controllers/_.edit.client.controller.js', 'modules/' + this.slugifiedPluralName + '/controllers/' + this.slugifiedPluralName + '.edit.client.ctrl.js');
+    this.template('controllers/_.view.client.controller.js', 'modules/' + this.slugifiedPluralName + '/controllers/' + this.slugifiedPluralName + '.view.client.ctrl.js');
+    this.template('controllers/_.create.client.controller.js', 'modules/' + this.slugifiedPluralName + '/controllers/' + this.slugifiedPluralName + '.create.client.ctrl.js');
     this.template('services/_.client.service.js', 'modules/' + this.slugifiedPluralName + '/services/' + this.slugifiedPluralName + '.client.service.js');
 
     // Render angular tests
-    this.template('tests/_.client.controller.tests.js', 'modules/' + this.slugifiedPluralName + '/tests/' + this.slugifiedPluralName + '.create.client.controller.tests.js');
     this.template('tests/_.client.routes.tests.js', 'modules/' + this.slugifiedPluralName + '/tests/' + this.slugifiedPluralName + '.view.client.routes.tests.js');
     this.template('tests/_.list.client.controller.tests.js', 'modules/' + this.slugifiedPluralName + '/tests/' + this.slugifiedPluralName + '.list.client.controller.tests.js');
 
