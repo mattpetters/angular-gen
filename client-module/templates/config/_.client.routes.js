@@ -16,7 +16,7 @@
       })
       .state('<%= slugifiedPluralName %>.list', {
         url: '',
-        templateUrl: 'modules/<%= slugifiedPluralName %>/client/views/<%= slugifiedPluralName %>.list.client.view.html',
+        templateUrl: 'modules/<%= slugifiedPluralName %>/views/<%= slugifiedPluralName %>.list.client.view.html',
         controller: '<%= classifiedPluralName %>ListController',
         data: {
           friendlyName: '<%= humanizedPluralName %> List'
@@ -24,7 +24,7 @@
       })
       .state('<%= slugifiedPluralName %>.create', {
         url: '/create',
-        templateUrl: 'modules/<%= slugifiedPluralName %>/client/views/<%= slugifiedSingularName %>.create.client.view.html',
+        templateUrl: 'modules/<%= slugifiedPluralName %>/views/<%= slugifiedSingularName %>.create.client.view.html',
         controller: '<%= classifiedPluralName %>Controller',
         resolve: {
           // <%= slugifiedSingularName %>Resolve: new<%= classifiedSingularName %>
@@ -36,7 +36,7 @@
       })
       .state('<%= slugifiedPluralName %>.edit', {
         url: '/:<%= camelizedSingularName %>_id/edit',
-        templateUrl: 'modules/<%= slugifiedPluralName %>/client/views/<%= slugifiedSingularName %>.edit.client.view.html',
+        templateUrl: 'modules/<%= slugifiedPluralName %>/views/<%= slugifiedSingularName %>.edit.client.view.html',
         controller: '<%= classifiedPluralName %>Controller',
         resolve: {
           // <%= slugifiedSingularName %>Resolve: get<%= classifiedSingularName %>
@@ -48,7 +48,7 @@
       })
       .state('<%= slugifiedPluralName %>.view', {
         url: '/:<%= camelizedSingularName %>_id',
-        templateUrl: 'modules/<%= slugifiedPluralName %>/client/views/<%= slugifiedSingularName %>.view.client.view.html',
+        templateUrl: 'modules/<%= slugifiedPluralName %>/views/<%= slugifiedSingularName %>.view.client.view.html',
         controller: '<%= classifiedPluralName %>Controller',
         resolve: {
           // <%= slugifiedSingularName %>Resolve: get<%= classifiedSingularName %>
