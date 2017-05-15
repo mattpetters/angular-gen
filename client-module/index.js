@@ -140,7 +140,7 @@ var ModuleGenerator = yeoman.generators.Base.extend({
     this.template('tests/_.list.client.controller.tests.js', 'modules/' + this.slugifiedPluralName + '/tests/' + this.slugifiedPluralName + '.list.client.controller.tests.js');
 
     // Render angular module views
-    this.template('views/_.form.client.view.html', 'modules/' + this.slugifiedPluralName + '/views/' + this.slugifiedSingularName + '.create.client.view.html');
+    this.template('views/_.create.client.view.html', 'modules/' + this.slugifiedPluralName + '/views/' + this.slugifiedSingularName + '.create.client.view.html');
     this.template('views/_.view.client.view.html', 'modules/' + this.slugifiedPluralName + '/views/' + this.slugifiedSingularName + '.view.client.view.html');
     this.template('views/_.list.client.view.html', 'modules/' + this.slugifiedPluralName + '/views/' + this.slugifiedPluralName + '.list.client.view.html');
 
