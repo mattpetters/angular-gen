@@ -5,9 +5,9 @@
     .module('<%= slugifiedPluralName %>')
     .controller('<%= classifiedPluralName %>ListController', <%= classifiedPluralName %>ListController);
 
-  <%= classifiedPluralName %>ListController.$inject = [];
+  <%= classifiedPluralName %>ListController.$inject = ['$scope'];
 
-  function <%= classifiedPluralName %>ListController() {
+  function <%= classifiedPluralName %>ListController($scope) {
 
   }
 }());

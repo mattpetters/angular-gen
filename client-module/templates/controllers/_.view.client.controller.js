@@ -3,11 +3,11 @@
 
   angular
     .module('<%= slugifiedPluralName %>')
-    .controller('<%= classifiedPluralName %>ListController', <%= classifiedPluralName %>ListController);
+    .controller('<%= classifiedPluralName %>ViewController', <%= classifiedPluralName %>ViewController);
 
-  <%= classifiedPluralName %>ListController.$inject = [];
+  <%= classifiedPluralName %>ViewController.$inject = ['$scope'];
 
-  function <%= classifiedPluralName %>ListController() {
+  function <%= classifiedPluralName %>ViewController($scope) {
 
   }
 }());
